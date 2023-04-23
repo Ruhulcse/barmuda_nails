@@ -7,9 +7,9 @@ function ContactForm() {
       <form>
         <Grid
           container
-          spacing={{ xs: 1 }}
+          spacing={{ xs: 2 }}
           columnSpacing={{ sm: 4 }}
-          rowSpacing={{ sm: 2 }}
+          rowSpacing={{ xs: 1, sm: 2 }}
         >
           {" "}
           <Grid item xs={12} sm={6}>

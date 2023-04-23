@@ -26,7 +26,7 @@ export default function Contact() {
         <div className="contact-content">
           <Grid
             container
-            spacing={{ xs: 2, sm: 8 }}
+            spacing={{ xs: 6, sm: 8 }}
             sx={{ paddingTop: "1em" }}
             alignItems="center"
           >
