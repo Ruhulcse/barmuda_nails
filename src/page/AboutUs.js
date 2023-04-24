@@ -7,6 +7,8 @@ import {
 } from "@mui/material/styles";
 import pictureOne from "../img/maria-lupan-LAeTFy7xmC0-unsplash.jpg";
 import pictureTwo from "../img/jesse-donoghoe-2aiP_wxNrfU-unsplash.jpg";
+import CountUpToFiveHun from "../components/CountUpToFiveHun";
+import CountUpToFive from "../components/CountUpToFive";
 
 let theme = createTheme({
   typography: {
@@ -52,13 +54,17 @@ export default function AboutUs() {
               <Grid container justifyContent="space-between">
                 <Grid>
                   {" "}
-                  <Typography variant="h2">500+</Typography>
+                  <Typography variant="h2">
+                    <CountUpToFiveHun />
+                  </Typography>
                   <Typography sx={{ fontSize: "18px", color: "#E59C5F" }}>
                     zufriedene Kunden
                   </Typography>
                 </Grid>
                 <Grid>
-                  <Typography variant="h2">5+</Typography>
+                  <Typography variant="h2">
+                    <CountUpToFive />
+                  </Typography>
                   <Typography sx={{ fontSize: "18px", color: "#E59C5F" }}>
                     Jahre Erfahrung
                   </Typography>
