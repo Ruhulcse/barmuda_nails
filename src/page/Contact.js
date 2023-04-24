@@ -1,5 +1,7 @@
 import {
+  Box,
   Grid,
+  Stack,
   ThemeProvider,
   Typography,
   createTheme,
@@ -7,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import ContactForm from "../components/ContactForm";
-import MyComponent from "../components/MapComponent";
+import Map from "../components/Map";
 
 let theme = createTheme({
   typography: {
@@ -23,21 +25,42 @@ export default function Contact() {
         <Typography sx={{ fontFamily: "'Gabriela', serif" }} variant="h4">
           Contact
         </Typography>
-        <div className="contact-content">
+        <Box
+          sx={{ display: { xs: "none", md: "block" } }}
+          className="contact-content"
+        >
+          <Stack
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}
+            sx={{ paddingTop: "2em" }}
+          >
+            {" "}
+            <ContactForm />
+            <Map />
+          </Stack>
+        </Box>
+        <Box sx={{ display: { md: "none" } }}>
           <Grid
             container
-            spacing={{ xs: 6, sm: 8 }}
-            sx={{ paddingTop: "1em" }}
+            direction="row"
+            justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={12} md={6}>
-              <ContactForm />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <MyComponent />
-            </Grid>
+            <ContactForm />
           </Grid>
-        </div>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            sx={{ paddingTop: "4em" }}
+          >
+            {" "}
+            <Map />
+          </Grid>
+        </Box>
       </ThemeProvider>
     </div>
   );
