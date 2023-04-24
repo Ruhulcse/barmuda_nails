@@ -15,7 +15,6 @@ import {
   Typography,
   createTheme,
   Grid,
-  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
@@ -71,21 +70,22 @@ export default function NavBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: "center", color: "#E59C5F" }}>
+            <ListItemButton
+              href={item.to}
+              sx={{ textAlign: "center", color: "#E59C5F" }}
+            >
               <ListItemText
                 primary={
-                  <Link href={item.to}>
-                    <Typography
-                      sx={{
-                        fontFamily: "'Fira Sans', sans-serif",
-                        fontStyle: "normal",
-                        color: "#4F4F4F",
-                        fontSize: "18px",
-                      }}
-                    >
-                      {item.name}
-                    </Typography>
-                  </Link>
+                  <Typography
+                    sx={{
+                      fontFamily: "'Fira Sans', sans-serif",
+                      fontStyle: "normal",
+                      color: "#4F4F4F",
+                      fontSize: "18px",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
                 }
               />
             </ListItemButton>
