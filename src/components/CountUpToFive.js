@@ -11,7 +11,7 @@ export default function CountUpToFiveHun() {
         onExit={() => setCounter(false)}
       >
         {counter && (
-          <CountUp id="counter" start={0} end={5} duration={3} suffix="+" />
+          <CountUp id="counter" start={0} end={15} duration={3} suffix="+" />
         )}
       </ScrollTrigger>
     </div>
