@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 export default function CountUpToFiveHun() {
+  const [counter, setCounter] = useState(false);
   return (
-    <CountUp
-      start={0}
-      end={5}
-      duration={3}
-      enableScrollSpy={true}
-      scrollSpyOnce={true}
-      suffix="+"
-    />
+    <div>
+      <ScrollTrigger
+        onEnter={() => setCounter(true)}
+        onExit={() => setCounter(false)}
+      >
+        {counter && (
+          <CountUp id="counter" start={0} end={5} duration={3} suffix="+" />
+        )}
+      </ScrollTrigger>
+    </div>
   );
 }
