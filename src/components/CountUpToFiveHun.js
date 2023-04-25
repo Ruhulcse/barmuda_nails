@@ -1,23 +1,15 @@
-import React, { useState } from "react";
-import { useCountUp } from "use-count-up";
+import React from "react";
+import CountUp from "react-countup";
 
 export default function CountUpToFiveHun() {
-  const [start] = useState(0);
-  const [end] = useState(500);
-  const [duration] = useState(5);
-
-  const { value } = useCountUp({
-    isCounting: true,
-    start,
-    end,
-    duration,
-    enableScrollSpy: true,
-    scrollSpyOnce: true,
-  });
-
   return (
-    <div>
-      <div>{value}+</div>
-    </div>
+    <CountUp
+      start={0}
+      end={500}
+      duration={3}
+      enableScrollSpy={true}
+      scrollSpyOnce={true}
+      suffix="+"
+    />
   );
 }
