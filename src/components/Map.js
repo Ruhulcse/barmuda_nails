@@ -11,7 +11,7 @@ function Map() {
           width="400"
           height="400"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Sandberg%2044%20Itzehoe+(Bermuda%20Nails)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Hamburg%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
       </Box>
       <Box sx={{ display: { xs: "none", sm: "block", md: "none" } }}>
@@ -21,7 +21,7 @@ function Map() {
           width="350"
           height="350"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Sandberg%2044%20Itzehoe+(Bermuda%20Nails)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Hamburg%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
       </Box>
       <Box sx={{ display: { xs: "block", sm: "none", md: "none" } }}>
@@ -31,7 +31,7 @@ function Map() {
           width="300"
           height="300"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Sandberg%2044%20Itzehoe+(Bermuda%20Nails)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Hamburg%20+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
       </Box>
     </div>
