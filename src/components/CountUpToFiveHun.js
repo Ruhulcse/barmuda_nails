@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CountUp from "react-countup";
 // import ScrollTrigger from "react-scroll-trigger";
 
@@ -12,7 +12,7 @@ export default function CountUpToFiveHun() {
       > */}
       {/* {count && ( */}
       <CountUp
-        enableScrollSpy
+        // enableScrollSpy useCallback
         scrollSpyOnce
         start={0}
         end={500}
