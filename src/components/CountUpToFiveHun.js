@@ -11,6 +11,8 @@ export default function CountUpToFiveHun() {
     start,
     end,
     duration,
+    enableScrollSpy: true,
+    scrollSpyOnce: true,
   });
 
   return (
