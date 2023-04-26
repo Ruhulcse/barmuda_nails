@@ -5,10 +5,9 @@ import {
   createTheme,
   responsiveFontSizes,
 } from "@mui/material/styles";
-import pictureOne from "../img/maria-lupan-LAeTFy7xmC0-unsplash.jpg";
-import pictureTwo from "../img/jesse-donoghoe-2aiP_wxNrfU-unsplash.jpg";
 import CountUpToFiveHun from "../components/CountUpToFiveHun";
 import CountUpToFive from "../components/CountUpToFive";
+import AboutUsPicAni from "../components/animations/AboutUsPicAni";
 
 let theme = createTheme({
   typography: {
@@ -74,24 +73,7 @@ export default function AboutUs() {
           </Grid>
 
           <Grid item xs={12} sm={6} lg={6}>
-            <div className="parent">
-              <div className="first-child">
-                <img
-                  className="first-child-pic"
-                  style={{ borderRadius: "7px" }}
-                  src={pictureOne}
-                  alt=""
-                />
-              </div>
-              <div className="second-child">
-                <img
-                  className="second-child-pic"
-                  style={{ borderRadius: "7px" }}
-                  src={pictureTwo}
-                  alt=""
-                />
-              </div>
-            </div>
+            <AboutUsPicAni />
           </Grid>
         </Grid>
       </ThemeProvider>
