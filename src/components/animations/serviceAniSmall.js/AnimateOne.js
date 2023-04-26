@@ -18,7 +18,7 @@ export default function AnimateOne() {
         scale: 1,
         transition: {
           type: "spring",
-          duration: 5,
+          duration: 1,
         },
       });
     }

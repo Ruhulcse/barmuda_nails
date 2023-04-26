@@ -19,7 +19,7 @@ export default function AnimateTwo() {
         scale: 1,
         transition: {
           type: "spring",
-          duration: 5,
+          duration: 1,
         },
       });
     }
