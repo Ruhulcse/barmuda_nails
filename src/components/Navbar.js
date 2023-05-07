@@ -18,7 +18,7 @@ import {
   Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../img/bermuda-logo.png";
 
 const drawerWidth = 240;
@@ -49,8 +49,9 @@ theme.typography.h6 = {
 };
 
 export default function NavBar(props) {
-  const { window } = props;
+  // const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [stickyClass, setStickyClass] = useState("");
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -95,11 +96,25 @@ export default function NavBar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  // const container = window !== undefined ? () => window().document.body : undefined;
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 150 ? setStickyClass("p-fixed") : setStickyClass("");
+    }
+  };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className={stickyClass}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar
@@ -159,7 +174,7 @@ export default function NavBar(props) {
         </AppBar>
         <Box component="nav">
           <Drawer
-            container={container}
+            // container={container}
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}
